@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="d0933ac1-d02a-4aa2-97f7-7fc384693750" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://addressvalidator.interoute.com/AddressValidatorService.svc?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="AddressValidatorService.xsd" MetadataType="Schema" ID="d99bb195-d652-458b-91a3-4e2b8c11aa6c" SourceId="1" SourceUrl="http://addressvalidator.interoute.com/AddressValidatorService.svc?xsd=xsd2" />
+    <MetadataFile FileName="AddressValidatorService1.xsd" MetadataType="Schema" ID="6bc85e45-b014-416d-ab13-db8fb66617ec" SourceId="1" SourceUrl="http://addressvalidator.interoute.com/AddressValidatorService.svc?xsd=xsd3" />
+    <MetadataFile FileName="AddressValidatorService2.xsd" MetadataType="Schema" ID="8d05120a-7f9c-433e-b000-3fec0f6cda68" SourceId="1" SourceUrl="http://addressvalidator.interoute.com/AddressValidatorService.svc?xsd=xsd0" />
+    <MetadataFile FileName="AddressValidatorService3.xsd" MetadataType="Schema" ID="b4bf4333-f80c-4b9b-bf8f-867277f6460a" SourceId="1" SourceUrl="http://addressvalidator.interoute.com/AddressValidatorService.svc?xsd=xsd1" />
+    <MetadataFile FileName="AddressValidatorService.wsdl" MetadataType="Wsdl" ID="2e97a5d5-5816-43fd-8ef9-18cdddb3c816" SourceId="1" SourceUrl="http://addressvalidator.interoute.com/AddressValidatorService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

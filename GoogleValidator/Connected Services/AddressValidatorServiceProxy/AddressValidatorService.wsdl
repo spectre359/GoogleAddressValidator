@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="AddressValidatorService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://addressvalidator.interoute.com/AddressValidatorService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://addressvalidator.interoute.com/AddressValidatorService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://addressvalidator.interoute.com/AddressValidatorService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/AddressValidator" />
+      <xsd:import schemaLocation="http://addressvalidator.interoute.com/AddressValidatorService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IAddressValidatorService_ValidateAddressText_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateAddressText" />
+  </wsdl:message>
+  <wsdl:message name="IAddressValidatorService_ValidateAddressText_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateAddressTextResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAddressValidatorService_ValidateAddressParts_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateAddressParts" />
+  </wsdl:message>
+  <wsdl:message name="IAddressValidatorService_ValidateAddressParts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateAddressPartsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAddressValidatorService_ValidateAddressTextSuggestions_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateAddressTextSuggestions" />
+  </wsdl:message>
+  <wsdl:message name="IAddressValidatorService_ValidateAddressTextSuggestions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateAddressTextSuggestionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAddressValidatorService_ValidateAddressPartsSuggestions_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateAddressPartsSuggestions" />
+  </wsdl:message>
+  <wsdl:message name="IAddressValidatorService_ValidateAddressPartsSuggestions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateAddressPartsSuggestionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAddressValidatorService_GetCoordinatesOfAddressText_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCoordinatesOfAddressText" />
+  </wsdl:message>
+  <wsdl:message name="IAddressValidatorService_GetCoordinatesOfAddressText_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCoordinatesOfAddressTextResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAddressValidatorService_GetCoordinatesOfAddressSuggestions_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCoordinatesOfAddressSuggestions" />
+  </wsdl:message>
+  <wsdl:message name="IAddressValidatorService_GetCoordinatesOfAddressSuggestions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCoordinatesOfAddressSuggestionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAddressValidatorService_ValidateAndGetAddressText_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateAndGetAddressText" />
+  </wsdl:message>
+  <wsdl:message name="IAddressValidatorService_ValidateAndGetAddressText_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateAndGetAddressTextResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAddressValidatorService_ValidateAndGetAddressSuggeestions_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateAndGetAddressSuggeestions" />
+  </wsdl:message>
+  <wsdl:message name="IAddressValidatorService_ValidateAndGetAddressSuggeestions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateAndGetAddressSuggeestionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAddressValidatorService_ValidateAndGetAddressParts_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateAndGetAddressParts" />
+  </wsdl:message>
+  <wsdl:message name="IAddressValidatorService_ValidateAndGetAddressParts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateAndGetAddressPartsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAddressValidatorService_ValidateAndGetAddressPartsSuggestions_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateAndGetAddressPartsSuggestions" />
+  </wsdl:message>
+  <wsdl:message name="IAddressValidatorService_ValidateAndGetAddressPartsSuggestions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateAndGetAddressPartsSuggestionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAddressValidatorService_GetAddressSuggestionsByCoordinates_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAddressSuggestionsByCoordinates" />
+  </wsdl:message>
+  <wsdl:message name="IAddressValidatorService_GetAddressSuggestionsByCoordinates_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAddressSuggestionsByCoordinatesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAddressValidatorService_GetAddressPartsSuggestionsByCoordinates_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAddressPartsSuggestionsByCoordinates" />
+  </wsdl:message>
+  <wsdl:message name="IAddressValidatorService_GetAddressPartsSuggestionsByCoordinates_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAddressPartsSuggestionsByCoordinatesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAddressValidatorService_GetAddressByCoordinates_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAddressByCoordinates" />
+  </wsdl:message>
+  <wsdl:message name="IAddressValidatorService_GetAddressByCoordinates_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAddressByCoordinatesResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IAddressValidatorService">
+    <wsdl:operation name="ValidateAddressText">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAddressValidatorService/ValidateAddressText" message="tns:IAddressValidatorService_ValidateAddressText_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAddressValidatorService/ValidateAddressTextResponse" message="tns:IAddressValidatorService_ValidateAddressText_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateAddressParts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAddressValidatorService/ValidateAddressParts" message="tns:IAddressValidatorService_ValidateAddressParts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAddressValidatorService/ValidateAddressPartsResponse" message="tns:IAddressValidatorService_ValidateAddressParts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateAddressTextSuggestions">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAddressValidatorService/ValidateAddressTextSuggestions" message="tns:IAddressValidatorService_ValidateAddressTextSuggestions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAddressValidatorService/ValidateAddressTextSuggestionsResponse" message="tns:IAddressValidatorService_ValidateAddressTextSuggestions_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateAddressPartsSuggestions">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAddressValidatorService/ValidateAddressPartsSuggestions" message="tns:IAddressValidatorService_ValidateAddressPartsSuggestions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAddressValidatorService/ValidateAddressPartsSuggestionsResponse" message="tns:IAddressValidatorService_ValidateAddressPartsSuggestions_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCoordinatesOfAddressText">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAddressValidatorService/GetCoordinatesOfAddressText" message="tns:IAddressValidatorService_GetCoordinatesOfAddressText_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAddressValidatorService/GetCoordinatesOfAddressTextResponse" message="tns:IAddressValidatorService_GetCoordinatesOfAddressText_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCoordinatesOfAddressSuggestions">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAddressValidatorService/GetCoordinatesOfAddressSuggestions" message="tns:IAddressValidatorService_GetCoordinatesOfAddressSuggestions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAddressValidatorService/GetCoordinatesOfAddressSuggestionsResponse" message="tns:IAddressValidatorService_GetCoordinatesOfAddressSuggestions_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateAndGetAddressText">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAddressValidatorService/ValidateAndGetAddressText" message="tns:IAddressValidatorService_ValidateAndGetAddressText_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAddressValidatorService/ValidateAndGetAddressTextResponse" message="tns:IAddressValidatorService_ValidateAndGetAddressText_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateAndGetAddressSuggeestions">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAddressValidatorService/ValidateAndGetAddressSuggeestions" message="tns:IAddressValidatorService_ValidateAndGetAddressSuggeestions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAddressValidatorService/ValidateAndGetAddressSuggeestionsResponse" message="tns:IAddressValidatorService_ValidateAndGetAddressSuggeestions_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateAndGetAddressParts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAddressValidatorService/ValidateAndGetAddressParts" message="tns:IAddressValidatorService_ValidateAndGetAddressParts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAddressValidatorService/ValidateAndGetAddressPartsResponse" message="tns:IAddressValidatorService_ValidateAndGetAddressParts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateAndGetAddressPartsSuggestions">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAddressValidatorService/ValidateAndGetAddressPartsSuggestions" message="tns:IAddressValidatorService_ValidateAndGetAddressPartsSuggestions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAddressValidatorService/ValidateAndGetAddressPartsSuggestionsResponse" message="tns:IAddressValidatorService_ValidateAndGetAddressPartsSuggestions_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAddressSuggestionsByCoordinates">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAddressValidatorService/GetAddressSuggestionsByCoordinates" message="tns:IAddressValidatorService_GetAddressSuggestionsByCoordinates_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAddressValidatorService/GetAddressSuggestionsByCoordinatesResponse" message="tns:IAddressValidatorService_GetAddressSuggestionsByCoordinates_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAddressPartsSuggestionsByCoordinates">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAddressValidatorService/GetAddressPartsSuggestionsByCoordinates" message="tns:IAddressValidatorService_GetAddressPartsSuggestionsByCoordinates_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAddressValidatorService/GetAddressPartsSuggestionsByCoordinatesResponse" message="tns:IAddressValidatorService_GetAddressPartsSuggestionsByCoordinates_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAddressByCoordinates">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAddressValidatorService/GetAddressByCoordinates" message="tns:IAddressValidatorService_GetAddressByCoordinates_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAddressValidatorService/GetAddressByCoordinatesResponse" message="tns:IAddressValidatorService_GetAddressByCoordinates_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IAddressValidatorService" type="tns:IAddressValidatorService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ValidateAddressText">
+      <soap:operation soapAction="http://tempuri.org/IAddressValidatorService/ValidateAddressText" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateAddressParts">
+      <soap:operation soapAction="http://tempuri.org/IAddressValidatorService/ValidateAddressParts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateAddressTextSuggestions">
+      <soap:operation soapAction="http://tempuri.org/IAddressValidatorService/ValidateAddressTextSuggestions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateAddressPartsSuggestions">
+      <soap:operation soapAction="http://tempuri.org/IAddressValidatorService/ValidateAddressPartsSuggestions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCoordinatesOfAddressText">
+      <soap:operation soapAction="http://tempuri.org/IAddressValidatorService/GetCoordinatesOfAddressText" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCoordinatesOfAddressSuggestions">
+      <soap:operation soapAction="http://tempuri.org/IAddressValidatorService/GetCoordinatesOfAddressSuggestions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateAndGetAddressText">
+      <soap:operation soapAction="http://tempuri.org/IAddressValidatorService/ValidateAndGetAddressText" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateAndGetAddressSuggeestions">
+      <soap:operation soapAction="http://tempuri.org/IAddressValidatorService/ValidateAndGetAddressSuggeestions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateAndGetAddressParts">
+      <soap:operation soapAction="http://tempuri.org/IAddressValidatorService/ValidateAndGetAddressParts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateAndGetAddressPartsSuggestions">
+      <soap:operation soapAction="http://tempuri.org/IAddressValidatorService/ValidateAndGetAddressPartsSuggestions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAddressSuggestionsByCoordinates">
+      <soap:operation soapAction="http://tempuri.org/IAddressValidatorService/GetAddressSuggestionsByCoordinates" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAddressPartsSuggestionsByCoordinates">
+      <soap:operation soapAction="http://tempuri.org/IAddressValidatorService/GetAddressPartsSuggestionsByCoordinates" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAddressByCoordinates">
+      <soap:operation soapAction="http://tempuri.org/IAddressValidatorService/GetAddressByCoordinates" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AddressValidatorService">
+    <wsdl:port name="BasicHttpBinding_IAddressValidatorService" binding="tns:BasicHttpBinding_IAddressValidatorService">
+      <soap:address location="http://addressvalidator.interoute.com/AddressValidatorService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

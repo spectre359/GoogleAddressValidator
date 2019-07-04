@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://addressvalidator.interoute.com/AddressValidatorService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/AddressValidator" />
+  <xs:import schemaLocation="http://addressvalidator.interoute.com/AddressValidatorService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:element name="ValidateAddressText">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="address" nillable="true" type="xs:string" />
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/AddressValidator" minOccurs="0" name="language" type="q1:GoogleService.languages" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateAddressTextResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/AddressValidator" minOccurs="0" name="ValidateAddressTextResult" nillable="true" type="q2:GeocodeResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateAddressParts">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="country" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="state" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="postcode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="city" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="street" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="house" nillable="true" type="xs:string" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/AddressValidator" minOccurs="0" name="language" type="q3:GoogleService.languages" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateAddressPartsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/AddressValidator" minOccurs="0" name="ValidateAddressPartsResult" nillable="true" type="q4:GeocodeResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateAddressTextSuggestions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="address" nillable="true" type="xs:string" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/AddressValidator" minOccurs="0" name="language" type="q5:GoogleService.languages" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateAddressTextSuggestionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ValidateAddressTextSuggestionsResult" nillable="true" type="q6:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateAddressPartsSuggestions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="country" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="state" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="postcode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="city" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="street" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="house" nillable="true" type="xs:string" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/AddressValidator" minOccurs="0" name="language" type="q7:GoogleService.languages" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateAddressPartsSuggestionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ValidateAddressPartsSuggestionsResult" nillable="true" type="q8:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCoordinatesOfAddressText">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="address" nillable="true" type="xs:string" />
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/AddressValidator" minOccurs="0" name="language" type="q9:GoogleService.languages" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCoordinatesOfAddressTextResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/AddressValidator" minOccurs="0" name="GetCoordinatesOfAddressTextResult" nillable="true" type="q10:GeoCoordinates" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCoordinatesOfAddressSuggestions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="address" nillable="true" type="xs:string" />
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/AddressValidator" minOccurs="0" name="language" type="q11:GoogleService.languages" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCoordinatesOfAddressSuggestionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/AddressValidator" minOccurs="0" name="GetCoordinatesOfAddressSuggestionsResult" nillable="true" type="q12:ArrayOfGeoCoordinates" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateAndGetAddressText">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="address" nillable="true" type="xs:string" />
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/AddressValidator" minOccurs="0" name="language" type="q13:GoogleService.languages" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateAndGetAddressTextResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/AddressValidator" minOccurs="0" name="ValidateAndGetAddressTextResult" nillable="true" type="q14:Address" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateAndGetAddressSuggeestions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="address" nillable="true" type="xs:string" />
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/AddressValidator" minOccurs="0" name="language" type="q15:GoogleService.languages" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateAndGetAddressSuggeestionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/AddressValidator" minOccurs="0" name="ValidateAndGetAddressSuggeestionsResult" nillable="true" type="q16:ArrayOfAddress" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateAndGetAddressParts">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="country" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="state" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="postcode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="city" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="street" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="house" nillable="true" type="xs:string" />
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/AddressValidator" minOccurs="0" name="language" type="q17:GoogleService.languages" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateAndGetAddressPartsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/AddressValidator" minOccurs="0" name="ValidateAndGetAddressPartsResult" nillable="true" type="q18:Address" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateAndGetAddressPartsSuggestions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="country" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="state" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="postcode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="city" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="street" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="house" nillable="true" type="xs:string" />
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/AddressValidator" minOccurs="0" name="language" type="q19:GoogleService.languages" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateAndGetAddressPartsSuggestionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/AddressValidator" minOccurs="0" name="ValidateAndGetAddressPartsSuggestionsResult" nillable="true" type="q20:ArrayOfAddress" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAddressSuggestionsByCoordinates">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="latitude" type="xs:decimal" />
+        <xs:element minOccurs="0" name="longitude" type="xs:decimal" />
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/AddressValidator" minOccurs="0" name="language" type="q21:GoogleService.languages" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAddressSuggestionsByCoordinatesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetAddressSuggestionsByCoordinatesResult" nillable="true" type="q22:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAddressPartsSuggestionsByCoordinates">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="latitude" type="xs:decimal" />
+        <xs:element minOccurs="0" name="longitude" type="xs:decimal" />
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/AddressValidator" minOccurs="0" name="language" type="q23:GoogleService.languages" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAddressPartsSuggestionsByCoordinatesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/AddressValidator" minOccurs="0" name="GetAddressPartsSuggestionsByCoordinatesResult" nillable="true" type="q24:ArrayOfAddress" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAddressByCoordinates">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="latitude" type="xs:decimal" />
+        <xs:element minOccurs="0" name="longitude" type="xs:decimal" />
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/AddressValidator" minOccurs="0" name="language" type="q25:GoogleService.languages" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAddressByCoordinatesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/AddressValidator" minOccurs="0" name="GetAddressByCoordinatesResult" nillable="true" type="q26:GeocodeResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/AddressValidator" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/AddressValidator" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="GoogleService.languages">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ar" />
+      <xs:enumeration value="bg" />
+      <xs:enumeration value="bn" />
+      <xs:enumeration value="ca" />
+      <xs:enumeration value="cs" />
+      <xs:enumeration value="da" />
+      <xs:enumeration value="de" />
+      <xs:enumeration value="el" />
+      <xs:enumeration value="en" />
+      <xs:enumeration value="en_AU" />
+      <xs:enumeration value="en_GB" />
+      <xs:enumeration value="es" />
+      <xs:enumeration value="eu" />
+      <xs:enumeration value="fa" />
+      <xs:enumeration value="fi" />
+      <xs:enumeration value="fil" />
+      <xs:enumeration value="fr" />
+      <xs:enumeration value="gl" />
+      <xs:enumeration value="gu" />
+      <xs:enumeration value="hi" />
+      <xs:enumeration value="hr" />
+      <xs:enumeration value="hu" />
+      <xs:enumeration value="id" />
+      <xs:enumeration value="it" />
+      <xs:enumeration value="iw" />
+      <xs:enumeration value="ja" />
+      <xs:enumeration value="kn" />
+      <xs:enumeration value="ko" />
+      <xs:enumeration value="lt" />
+      <xs:enumeration value="lv" />
+      <xs:enumeration value="ml" />
+      <xs:enumeration value="mr" />
+      <xs:enumeration value="nl" />
+      <xs:enumeration value="no" />
+      <xs:enumeration value="pl" />
+      <xs:enumeration value="pt" />
+      <xs:enumeration value="pt_BR" />
+      <xs:enumeration value="pt_PT" />
+      <xs:enumeration value="ro" />
+      <xs:enumeration value="ru" />
+      <xs:enumeration value="sk" />
+      <xs:enumeration value="sl" />
+      <xs:enumeration value="sr" />
+      <xs:enumeration value="sv" />
+      <xs:enumeration value="ta" />
+      <xs:enumeration value="te" />
+      <xs:enumeration value="th" />
+      <xs:enumeration value="tl" />
+      <xs:enumeration value="tr" />
+      <xs:enumeration value="uk" />
+      <xs:enumeration value="vi" />
+      <xs:enumeration value="zh_CN" />
+      <xs:enumeration value="zh_TW" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="GoogleService.languages" nillable="true" type="tns:GoogleService.languages" />
+  <xs:complexType name="GeocodeResponse">
+    <xs:sequence>
+      <xs:element name="_x003C_error_message_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_xml_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="resultField" nillable="true" type="tns:ArrayOfresult" />
+      <xs:element name="statusField" type="tns:status" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GeocodeResponse" nillable="true" type="tns:GeocodeResponse" />
+  <xs:complexType name="ArrayOfresult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="result" nillable="true" type="tns:result" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfresult" nillable="true" type="tns:ArrayOfresult" />
+  <xs:complexType name="result">
+    <xs:sequence>
+      <xs:element name="address_componentField" nillable="true" type="tns:ArrayOfaddress_component" />
+      <xs:element name="formatted_addressField" nillable="true" type="xs:string" />
+      <xs:element name="geometryField" nillable="true" type="tns:geometry" />
+      <xs:element name="partial_matchField" type="xs:boolean" />
+      <xs:element name="place_idField" nillable="true" type="xs:string" />
+      <xs:element name="typeField" type="tns:type" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="result" nillable="true" type="tns:result" />
+  <xs:complexType name="ArrayOfaddress_component">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="address_component" nillable="true" type="tns:address_component" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfaddress_component" nillable="true" type="tns:ArrayOfaddress_component" />
+  <xs:complexType name="address_component">
+    <xs:sequence>
+      <xs:element name="long_nameField" nillable="true" type="xs:string" />
+      <xs:element name="short_nameField" nillable="true" type="xs:string" />
+      <xs:element name="typeField" nillable="true" type="tns:ArrayOftype" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="address_component" nillable="true" type="tns:address_component" />
+  <xs:complexType name="ArrayOftype">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="type" type="tns:type" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOftype" nillable="true" type="tns:ArrayOftype" />
+  <xs:simpleType name="type">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="street_address" />
+      <xs:enumeration value="route" />
+      <xs:enumeration value="intersection" />
+      <xs:enumeration value="political" />
+      <xs:enumeration value="country" />
+      <xs:enumeration value="administrative_area_level_1" />
+      <xs:enumeration value="administrative_area_level_2" />
+      <xs:enumeration value="administrative_area_level_3" />
+      <xs:enumeration value="administrative_area_level_4" />
+      <xs:enumeration value="administrative_area_level_5" />
+      <xs:enumeration value="sublocality_level_1" />
+      <xs:enumeration value="sublocality_level_2" />
+      <xs:enumeration value="sublocality_level_3" />
+      <xs:enumeration value="sublocality_level_4" />
+      <xs:enumeration value="sublocality_level_5" />
+      <xs:enumeration value="colloquial_area" />
+      <xs:enumeration value="locality" />
+      <xs:enumeration value="sublocality" />
+      <xs:enumeration value="neighborhood" />
+      <xs:enumeration value="premise" />
+      <xs:enumeration value="subpremise" />
+      <xs:enumeration value="postal_code" />
+      <xs:enumeration value="natural_feature" />
+      <xs:enumeration value="airport" />
+      <xs:enumeration value="park" />
+      <xs:enumeration value="point_of_interest" />
+      <xs:enumeration value="post_box" />
+      <xs:enumeration value="street_number" />
+      <xs:enumeration value="floor" />
+      <xs:enumeration value="room" />
+      <xs:enumeration value="establishment" />
+      <xs:enumeration value="postal_town" />
+      <xs:enumeration value="postal_code_prefix" />
+      <xs:enumeration value="bus_station" />
+      <xs:enumeration value="subway_station" />
+      <xs:enumeration value="transit_station" />
+      <xs:enumeration value="museum" />
+      <xs:enumeration value="place_of_worship" />
+      <xs:enumeration value="university" />
+      <xs:enumeration value="train_station" />
+      <xs:enumeration value="campground" />
+      <xs:enumeration value="lodging" />
+      <xs:enumeration value="post_office" />
+      <xs:enumeration value="fire_station" />
+      <xs:enumeration value="church" />
+      <xs:enumeration value="pharmacy" />
+      <xs:enumeration value="doctor" />
+      <xs:enumeration value="school" />
+      <xs:enumeration value="parking" />
+      <xs:enumeration value="amusement_park" />
+      <xs:enumeration value="cemetery" />
+      <xs:enumeration value="hospital" />
+      <xs:enumeration value="library" />
+      <xs:enumeration value="police" />
+      <xs:enumeration value="zoo" />
+      <xs:enumeration value="store" />
+      <xs:enumeration value="stadium" />
+      <xs:enumeration value="health" />
+      <xs:enumeration value="courthouse" />
+      <xs:enumeration value="city_hall" />
+      <xs:enumeration value="finance" />
+      <xs:enumeration value="dentist" />
+      <xs:enumeration value="embassy" />
+      <xs:enumeration value="aquarium" />
+      <xs:enumeration value="local_government_office" />
+      <xs:enumeration value="food" />
+      <xs:enumeration value="storage" />
+      <xs:enumeration value="real_estate_agency" />
+      <xs:enumeration value="general_contractor" />
+      <xs:enumeration value="ward" />
+      <xs:enumeration value="postal_code_suffix" />
+      <xs:enumeration value="cafe" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="type" nillable="true" type="tns:type" />
+  <xs:complexType name="geometry">
+    <xs:sequence>
+      <xs:element name="locationField" nillable="true" type="tns:location" />
+      <xs:element name="location_typeField" type="tns:location_type" />
+      <xs:element name="viewportField" nillable="true" type="tns:viewport" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="geometry" nillable="true" type="tns:geometry" />
+  <xs:complexType name="location">
+    <xs:sequence>
+      <xs:element name="latField" type="xs:decimal" />
+      <xs:element name="lngField" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="location" nillable="true" type="tns:location" />
+  <xs:simpleType name="location_type">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ROOFTOP" />
+      <xs:enumeration value="RANGE_INTERPOLATED" />
+      <xs:enumeration value="GEOMETRIC_CENTER" />
+      <xs:enumeration value="APPROXIMATE" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="location_type" nillable="true" type="tns:location_type" />
+  <xs:complexType name="viewport">
+    <xs:sequence>
+      <xs:element name="northeastField" nillable="true" type="tns:northeast" />
+      <xs:element name="southwestField" nillable="true" type="tns:southwest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="viewport" nillable="true" type="tns:viewport" />
+  <xs:complexType name="northeast">
+    <xs:sequence>
+      <xs:element name="latField" type="xs:decimal" />
+      <xs:element name="lngField" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="northeast" nillable="true" type="tns:northeast" />
+  <xs:complexType name="southwest">
+    <xs:sequence>
+      <xs:element name="latField" type="xs:decimal" />
+      <xs:element name="lngField" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="southwest" nillable="true" type="tns:southwest" />
+  <xs:simpleType name="status">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="OK" />
+      <xs:enumeration value="ZERO_RESULTS" />
+      <xs:enumeration value="OVER_QUERY_LIMIT" />
+      <xs:enumeration value="REQUEST_DENIED" />
+      <xs:enumeration value="INVALID_REQUEST" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="status" nillable="true" type="tns:status" />
+  <xs:complexType name="GeoCoordinates">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Latitude" type="xs:decimal" />
+      <xs:element minOccurs="0" name="LocationType" type="tns:location_type" />
+      <xs:element minOccurs="0" name="Longitude" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GeoCoordinates" nillable="true" type="tns:GeoCoordinates" />
+  <xs:complexType name="ArrayOfGeoCoordinates">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GeoCoordinates" nillable="true" type="tns:GeoCoordinates" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGeoCoordinates" nillable="true" type="tns:ArrayOfGeoCoordinates" />
+  <xs:complexType name="Address">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CountryCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FormattedAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FullAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="House" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Latitude" type="xs:decimal" />
+      <xs:element minOccurs="0" name="LocationType" type="tns:location_type" />
+      <xs:element minOccurs="0" name="Longitude" type="xs:decimal" />
+      <xs:element minOccurs="0" name="PartialMatch" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Postcode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Premise" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="State" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StateCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Street" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Address" nillable="true" type="tns:Address" />
+  <xs:complexType name="ArrayOfAddress">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Address" nillable="true" type="tns:Address" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAddress" nillable="true" type="tns:ArrayOfAddress" />
+</xs:schema>
